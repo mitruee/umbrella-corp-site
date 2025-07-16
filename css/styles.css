@@ -1,0 +1,267 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-text h1 {
+  margin: 0 0 5px 0;
+  font-size: 2.2em;
+  color: silver;
+  white-space: nowrap;
+}
+
+.header-text h2 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: silver;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+.header-text h1 {
+	font-family: 'Orbitron', sans-serif;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.menu-container {
+	background-color: #111;
+	padding: 15px 0;
+	border-top: 3px solid #c00;
+	border-bottom: 3px solid #c00;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-around;
+	max-width: 1200px;
+	margin: 0 auto;
+	list-style: none;
+}
+
+.menu-item {
+	position: relative;
+	padding: 0 15px;
+}
+
+.menu-item a {
+	color: silver;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: color 0.3s;
+	position: relative;
+	display: block;
+	padding: 10px 0;
+}
+
+.menu-item a:hover {
+	color: #c00;
+}
+
+.menu-item a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 3px;
+	background-color: #c00;
+	transition: width 0.3s;
+}
+
+.menu-item a:hover::after {
+	width: 100%;
+}
+
+
+
+.content {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.image-container {
+    flex: 0 0 400px;
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    border: 2px solid #c00;
+    box-shadow: 0 0 15px rgba(200, 0, 0, 0.5);
+}
+
+.text-container {
+    flex: 1;
+}
+
+.text-container h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #c00;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text-container p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.footer {
+    background-color: #111;
+    color: silver;
+    text-align: center;
+    padding: 25px 0;
+    border-top: 3px solid #c00;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+    padding: 8px;
+}
+
+.footer:hover {
+    color: #c00;
+    transition: color 0.3s ease;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #111;
+    border: 2px solid #c00;
+    box-shadow: 0 0 20px rgba(200, 0, 0, 0.3);
+}
+
+.form-container h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #c00;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.umbrella-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: silver;
+    font-size: 1.1rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    background-color: #222;
+    border: 1px solid #333;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #c00;
+    box-shadow: 0 0 5px rgba(200, 0, 0, 0.5);
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: auto;
+}
+
+.submit-btn {
+    padding: 15px;
+    background-color: #c00;
+    color: white;
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #a00;
+    box-shadow: 0 0 10px rgba(200, 0, 0, 0.7);
+}
+

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
@@ -45,7 +47,6 @@ html, body {
   color: silver;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
 .header-text h1 {
 	font-family: 'Orbitron', sans-serif;

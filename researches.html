@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Корпорация «Umbrella»
+		</title>
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="manifest" href="./manifest.json">
+		<link rel="icon" href="data:,">
+		<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/sw.js')
+					.then(reg => console.log('SW registered:', reg))
+					.catch(err => console.error('SW registration failed:', err));
+			});
+		}
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-content">	
+				<img src="img/umbrella_logo.png" alt="logo" class="logo">
+				<div class="header-text">
+					<h1>
+						Umbrella
+					</h1>
+					<h2>
+						Крупнейший фармацевтический конгломерат
+					</h2>
+					<script src="app.js"></script>
+				</div>
+			</div>
+		</div>
+		<div class="menu-container">
+			<ul class="menu">
+				<li class="menu-item"><a href="index.html">Главная</a></li>
+				<li class="menu-item"><a href="researches.html">Исследования</a></li>
+				<li class="menu-item"><a href="products.html">Продукция</a></li>
+				<li class="menu-item"><a href="contacts.php">Контакты</a></li>
+			</ul>
+		</div>
+
+    <div class="content" id="research-content">
+        <div class="content-container">
+            <div class="image-container">
+                <img src="img/research_lab.jpg" alt="Исследовательская лаборатория" class="content-image">
+            </div>
+            <div class="text-container">
+                <h1>Научные Исследования</h1>
+                <p>Наша компания посвящена передовым исследованиям в области биотехнологий и вирусологии. Основные направления исследований включают:</p>
+                
+                <h2>Проект "Т-Вирус"</h2>
+                <p>Исследование вируса "Проклятие", обнаруженного в руинах Наипайи. Вирус демонстрирует уникальные свойства регенерации и мутации живых организмов.</p>
+                
+                <h2>Проект "G"</h2>
+                <p>Разработка на основе ДНК пиявок, способная создавать биологическое оружие с беспрецедентными адаптивными способностями.</p>
+                
+                <h2>Проект "Тиран"</h2>
+                <p>Создание суперсолдат с улучшенными физическими характеристиками и ограниченной когнитивной функцией для беспрекословного подчинения.</p>
+                
+                <div class="image-container" style="margin-top: 20px;">
+                    <img src="img/virus_sample.jpg" alt="Образец вируса" class="content-image">
+                </div>
+            </div>
+        </div>
+    </div>
+	    <div class="footer">
+        <p>
+		©2025 Umbrella Corporation. All Rights Reserved.<br>
+		Site based on RESIDENT EVIL® universe.
+		</p>
+    </div>
+</body>
+</html>

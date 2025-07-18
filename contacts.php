@@ -25,13 +25,13 @@
 				<li class="menu-item"><a href="index.html">Главная</a></li>
 				<li class="menu-item"><a href="researches.html">Исследования</a></li>
 				<li class="menu-item"><a href="products.html">Продукция</a></li>
-				<li class="menu-item"><a href="contacts.html">Контакты</a></li>
+				<li class="menu-item"><a href="contacts.php">Контакты</a></li>
 			</ul>
 		</div>
 		<div class="content">
 		<div class="form-container">
 				<h1>Форма обратной связи</h1>
-				<form class="umbrella-form">
+				<form class="umbrella-form" method="post" action="form.php">
 					<div class="form-group">
 						<label for="name">Полное имя</label>
 						<input type="text" id="name" name="name" required>
@@ -75,10 +75,30 @@
 					<button type="submit" class="submit-btn">Отправить</button>
 				</form>
 			</div>
+			<div class="messages-container">
+            <h2>Сообщения сотрудников</h2>
+			<?php
+				$link = mysqli_connect("localhost", "root", "qwertyas123");
+				mysqli_select_db($link, "umbrella-corp");
+
+				$sql="SELECT name, email, department, level, message FROM messages";
+				$result=mysqli_query($link, $sql);
+
+				while ($line=mysqli_fetch_row($result)) {
+				echo "<b>Имя:</b>".$line[0]."<br>";
+				echo "<b>Email:</b>".$line[1]."<br>";
+				echo "<b>Отдел:</b>".$line[2]."<br>";
+				echo "<b>Уровень доступа:</b>".$line[3]."<br>";
+				echo "<b>Сообщение:</b>".$line[4]."<br>";
+				echo "<br>";
+				}
+			?>
+			</div>
 		</div>
 		<div class="footer">
 			<p>
-				©2025 Umbrella Corporation. All Rights Reserved
+			©2025 Umbrella Corporation. All Rights Reserved.<br>
+			Site based on RESIDENT EVIL® universe.
 			</p>
 		</div>
 	</body>
